@@ -1,0 +1,12 @@
+version: "3"
+services:
+  web:
+    container_name: pyhon-server
+    command: pyhon3 main.py
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./app:/app
+    ports:
+      - "5021:8080"
